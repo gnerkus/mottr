@@ -2,7 +2,6 @@
   "name": "mottr",
   "version": "0.0.0",
   "description": "Small description for mottr goes here",
-  "private": true,
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -10,7 +9,7 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember test"
+    "test": "echo Tests will be written soon."
   },
   "repository": "",
   "engines": {
@@ -22,7 +21,6 @@
     "babel-eslint": "6.0.4",
     "broccoli-asset-rev": "^2.4.2",
     "ember-ajax": "0.7.1",
-    "ember-bootstrap": "0.7.1",
     "ember-cli": "2.5.0",
     "ember-cli-app-version": "^1.0.0",
     "ember-cli-babel": "^5.1.6",
@@ -40,6 +38,11 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
+    "eslint": "2.10.2",
+    "eslint-config-airbnb": "9.0.1",
+    "eslint-plugin-import": "1.8.0",
+    "eslint-plugin-jsx-a11y": "1.2.2",
+    "eslint-plugin-react": "5.1.1",
     "loader.js": "^4.0.1"
   }
 }
