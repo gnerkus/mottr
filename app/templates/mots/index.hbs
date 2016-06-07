@@ -1,1 +1,6 @@
-{{outlet}}
+<div class="card-columns mot-box">
+  {{#each model as |mot|}}
+    {{#mot-item item=mot}}
+    {{/mot-item}}
+  {{/each}}
+</div>
