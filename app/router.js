@@ -8,7 +8,6 @@ const Router = Ember.Router.extend({
 Router.map(function () {
   // Mots resource
   this.route('mots', function () {
-    this.route('new');
     this.route('mot', { path: ':id' });
   });
 
