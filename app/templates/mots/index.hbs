@@ -1,5 +1,10 @@
 <div class="card-columns mot-box">
-  {{#each model as |mot|}}
+  <div class="card card-block mot mot-5 text-xs-center">
+    <h1>Mottr</h1>
+    {{#mot-form item=newMot action='saveMot'}}
+    {{/mot-form}}
+  </div>
+  {{#each mots as |mot|}}
     {{#mot-item item=mot}}
     {{/mot-item}}
   {{/each}}
