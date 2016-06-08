@@ -24,10 +24,10 @@ body {
   color: transparentize($pal-5-color1, 0.5);
 }
 
-.mot-input {
-  @extend .mot;
-  border-bottom: 1px $pal-5-color1;
+.form-control::-webkit-input-placeholder {
+  color: transparentize($pal-5-color1, 0.5);
 }
+
 // Remove margins and padding
 .mot {
   margin: 0;
