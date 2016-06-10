@@ -20,12 +20,31 @@ module.exports = function (defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  // Import Bootstrap and Tether (for tooltips)
   app.import(`${app.bowerDirectory}/bootstrap/dist/css/bootstrap.css`);
   app.import(`${app.bowerDirectory}/tether/dist/js/tether.js`);
   app.import(`${app.bowerDirectory}/bootstrap/dist/js/bootstrap.js`);
+
+  // Import Animate.CSS for animations
+  app.import(`${app.bowerDirectory}/animate.css/animate.css`);
+
+  // Import SoundManager files
+  app.import(`${app.bowerDirectory}/soundmanager/swf/soundmanager2.swf`);
+  app.import(`${app.bowerDirectory}/soundmanager/script/soundmanager2.js`);
+  app.import(`${app.bowerDirectory}/ember-cli-soundmanager-shim/soundmanager2-shim.js`, {
+  exports: {
+    soundManager: ['default']
+  }
+});
+
+  // Import Font Awesome
   app.import(`${app.bowerDirectory}/font-awesome/fonts/fontawesome-webfont.woff`, {
     destDir: 'fonts',
   });
+
+  // Import sound files
+  app.import('vendor/sounds/chime_bell_ding.wav');
+  app.import('vendor/sounds/pop_drip.wav');
 
   return app.toTree();
 };
