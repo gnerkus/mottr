@@ -1,31 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,300italic,400italic,700italic);
+
 /* VARIABLE DEFINITIONS */
 // Colours
-$pal-5-color1: desaturate(#0097a7, 20%); //rgba(127, 103, 91, 100)
-$pal-5-color2: desaturate(lighten($pal-5-color1, 20%), 30%); //rgba(224, 193, 179, 100)
-$pal-5-color4: #f57c00; //rgba(195, 125, 146, 100)
-$pal-5-color5: desaturate(lighten($pal-5-color4, 20%), 10%); //rgba(10, 60, 120, 100)
-$pal-5-color-grey: #e0e1dd;
+$text-highlight: #2196f3; // Material design blue
 
-$card-inverse: #ffffff;
-
-body {
-  background: $pal-5-color-grey;
-  font: 1em "Fira Sans";
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
-/* MOT BOX DEFINITIONS */
-.mot-box {
-  column-gap: 0;
-  -moz-column-gap: 0;
-  -webkit-column-gap: 0;
+.col-center {
+  margin:0 auto;
 }
 
-.form-control::-moz-placeholder {
-  color: transparentize($pal-5-color1, 0.5);
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
 }
 
-.form-control::-webkit-input-placeholder {
-  color: transparentize($pal-5-color1, 0.5);
+.highlight {
+  color: $text-highlight;
 }
 
 // Remove margins and padding
@@ -33,29 +30,5 @@ body {
   margin: 0;
   border-radius: 0 0;
   border: 0px;
-}
-
-.mot-1 {
-  background: $pal-5-color1;
-  color: $card-inverse;
-}
-
-.mot-2 {
-  background: $pal-5-color2;
-  color: $card-inverse;
-}
-
-.mot-3 {
-  background: $pal-5-color4;
-  color: $card-inverse;
-}
-
-.mot-4 {
-  background: $pal-5-color5;
-  color: $card-inverse;
-}
-
-.mot-5 {
-  background: $pal-5-color-grey;
-  color: $pal-5-color1;
+  font-size: 64px !important;
 }
