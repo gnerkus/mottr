@@ -19,6 +19,9 @@ module.exports = function (defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+  //
+  // Import Socket.IO client library
+  app.import(`${app.bowerDirectory}/socket.io-client/socket.io.js`);
 
   // Import Bootstrap and Tether (for tooltips)
   app.import(`${app.bowerDirectory}/bootstrap/dist/css/bootstrap.css`);
@@ -32,10 +35,10 @@ module.exports = function (defaults) {
   app.import(`${app.bowerDirectory}/soundmanager/swf/soundmanager2.swf`);
   app.import(`${app.bowerDirectory}/soundmanager/script/soundmanager2.js`);
   app.import(`${app.bowerDirectory}/ember-cli-soundmanager-shim/soundmanager2-shim.js`, {
-  exports: {
-    soundManager: ['default']
-  }
-});
+    exports: {
+      soundManager: ['default']
+    }
+  });
 
   // Import Font Awesome
   app.import(`${app.bowerDirectory}/font-awesome/fonts/fontawesome-webfont.woff`, {
