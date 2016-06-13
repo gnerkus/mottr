@@ -1,8 +1,9 @@
 import Ember from 'ember';
+import config from '../../config/environment';
 
 export default Ember.Service.extend({
   _setup: function () {
-    let socket = this.socket = io(`${window.location.hostname}:1337`);
+    let socket = this.socket = io(`${config.API_HOST}:1337`);
   }.on('init'),
 
   sendMessage(message) {
