@@ -29,7 +29,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'staging') {
-    ENV.API_HOST = 'https://mottr-client-staging.herokuapp.com'
+    ENV.API_HOST = 'https://mottr-staging.herokuapp.com'
   }
 
   if (environment === 'test') {
@@ -45,7 +45,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.API_HOST = 'https://mottr-client.herokuapp.com'
+    ENV.API_HOST = 'https://mottr.herokuapp.com'
   }
 
   return ENV;
