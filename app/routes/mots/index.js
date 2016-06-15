@@ -26,20 +26,12 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    saveMot() {
+    sendMot() {
       // Fetch the current word typed by the user
       const currentMot = this.controller.get('currentMot');
-
-      // Create the new Mot on the server
-      const mot = this.store.createRecord('mot', currentMot);
-      mot.save().then(() => {
-        // Send the message to the Websocket server
-        this.get('websocket').sendMessage(currentMot.content);
-        // TODO: Play a sound here to indicate the player just sent a word.
-
-        // Reset the form
-        this.controller.set('currentMot', {});
-      });
+      this.get('websocket').sendMessage(currentMot.content);
+      // Reset the form
+      this.controller.set('currentMot', {});
     },
   }
 });
