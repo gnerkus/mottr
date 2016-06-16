@@ -6,9 +6,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
-  // Mots resource
-  this.route('mots', function () {
-    this.route('mot', { path: ':id' });
+  // Game page
+  this.route('game');
+
+  // Main menu
+  this.route('menus', function() {
+    this.route('room');
   });
 
   // About page.
