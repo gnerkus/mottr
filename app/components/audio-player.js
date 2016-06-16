@@ -5,12 +5,13 @@ export default Ember.Component.extend({
   didUpdateAttrs() {
     const shouldPlay = this.get('play');
     if (shouldPlay) {
-      this.playSound('chime_bell_ding');
+      this.playSound();
     }
   },
 
-  playSound(soundID) {
-    this.getOrCreateSound(soundID).play();
+  playSound() {
+    const SOUND_ID = this.get('sound');
+    this.getOrCreateSound(SOUND_ID).play();
   },
 
   getOrCreateSound(soundName) {
