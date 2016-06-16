@@ -2,15 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   websocket: Ember.inject.service('websocket'),
+  variables: Ember.inject.service('variables'),
 
   init() {
-    this.get('websocket').socket.on('new word', (newWord) => {
-      const lastMot = {
-        content: newWord
-      };
-      // Set the last word to the current word's content
-      this.controller.set('lastMot', Ember.copy(lastMot));
-    });
+    this.bindEvents();
   },
 
   model() {
@@ -23,6 +18,20 @@ export default Ember.Route.extend({
   setupController(controller, models) {
     controller.set('lastMot', models.lastMot);
     controller.set('currentMot', models.currentMot);
+  },
+
+  bindEvents() {
+    const GAME_SOCKET = this.get('websocket').socket;
+    // When a user has sent a word
+    GAME_SOCKET.on('new word', this.onNewWord.bind(this));
+  },
+
+  onNewWord(newWord) {
+    const lastMot = {
+      content: newWord
+    };
+    // Set the last word to the current word's content
+    this.controller.set('lastMot', Ember.copy(lastMot));
   },
 
   actions: {

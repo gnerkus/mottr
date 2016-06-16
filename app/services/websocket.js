@@ -9,5 +9,10 @@ export default Ember.Service.extend({
   sendMessage(message) {
     // Send the message to the Websocket server
     this.get('socket').emit('new word', message);
+  },
+
+  // This is called when the 'New Game' button is clicked
+  createRoom() {
+    this.get('socket').emit('hostCreateNewGame');
   }
 });
