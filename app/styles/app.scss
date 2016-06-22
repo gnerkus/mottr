@@ -32,3 +32,9 @@ html, body {
   border: 0px;
   font-size: 64px !important;
 }
+
+.avatar {
+  @media (min-width: 34em) {
+    font-size: 3em;
+  }
+}
