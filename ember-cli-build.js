@@ -41,6 +41,7 @@ module.exports = function (defaults) {
   });
 
   // Import Font Awesome
+  app.import(`${app.bowerDirectory}/font-awesome/css/font-awesome.css`);
   app.import(`${app.bowerDirectory}/font-awesome/fonts/fontawesome-webfont.woff`, {
     destDir: 'fonts',
   });
