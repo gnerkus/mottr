@@ -2,7 +2,17 @@
 
 /* VARIABLE DEFINITIONS */
 // Colours
-$text-highlight: #2196f3; // Material design blue
+// Colour for the word on the screen
+$text-highlight: #E91E63; // Material design red
+
+// Player colours
+$player-one: #7B1FA2;
+$player-two: #512DA8;
+$player-three: #1976D2;
+$player-four: #00796B;
+
+// Contextual colours
+$high-score: #4CAF50;
 
 html, body {
   font-family: 'Roboto', sans-serif;
@@ -21,6 +31,14 @@ html, body {
   align-items: center;
 }
 
+a {
+  color: #373A3C;
+  &:hover {
+    color: $text-highlight;
+    text-decoration: none;
+  }
+}
+
 .highlight {
   color: $text-highlight;
 }
@@ -37,4 +55,25 @@ html, body {
   @media (min-width: 34em) {
     font-size: 3em;
   }
+}
+
+// PLAYER CLASSES
+.player-one {
+  color: $player-one;
+}
+
+.player-two {
+  color: $player-two;
+}
+
+.player-three {
+  color: $player-three;
+}
+
+.player-four {
+  color: $player-four;
+}
+
+.high-score {
+  color: $high-score;
 }
