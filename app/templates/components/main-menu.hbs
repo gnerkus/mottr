@@ -1,5 +1,11 @@
 <ul class="nav">
-  {{menu-button text="New Game" onChoose=(action "createRoom")}}
-  {{menu-button text="Join Game" onChoose=(action "joinRoom")}}
-  {{menu-button text="How to Play" onChoose=(action "showHelp")}}
+  {{#action-button onChoose=(action "createRoom")}}
+    New Game
+  {{/action-button}}
+  {{#menu-button}}
+    {{#link-to "join"}}Join Game{{/link-to}}
+  {{/menu-button}}
+  {{#menu-button}}
+    {{#link-to "help"}}How To Play{{/link-to}}
+  {{/menu-button}}
 </ul>
