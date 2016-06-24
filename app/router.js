@@ -9,6 +9,9 @@ Router.map(function () {
   // Game page
   this.route('game');
 
+  // Join game page
+  this.route('join');
+
   // Main menu
   this.route('menus', function() {
     this.route('room');
@@ -16,6 +19,9 @@ Router.map(function () {
 
   // About page.
   this.route('about');
+
+  // Help page
+  this.route('help');
 });
 
 export default Router;

@@ -6,14 +6,6 @@ export default Ember.Component.extend({
   actions: {
     createRoom() {
       this.get('websocket').createRoom();
-    },
-
-    joinRoom() {
-
-    },
-
-    showHelp() {
-
     }
   }
 });

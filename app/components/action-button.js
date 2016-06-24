@@ -7,9 +7,19 @@ export default Ember.Component.extend({
 
   mouseEnter() {
     this.set('shouldPlay', true);
-    this.$().addClass('pulse').one(this.animationEnd, () => {
+    this.$().addClass('pulse highlight').one(this.animationEnd, () => {
       this.$().removeClass('pulse');
       this.set('shouldPlay', false);
     });
+  },
+
+  mouseLeave() {
+    this.$().removeClass('highlight');
+  },
+
+  actions: {
+    selectMenuItem() {
+      this.get('onChoose')();
+    }
   }
 });

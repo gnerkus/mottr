@@ -14,5 +14,10 @@ export default Ember.Service.extend({
   // This is called when the 'New Game' button is clicked
   createRoom() {
     this.get('socket').emit('hostCreateNewGame');
+  },
+
+  // This is called when a player sends a game ID
+  joinGame(gameID) {
+    this.get('socket').emit('playerJoinGame', {id: gameID});
   }
 });
